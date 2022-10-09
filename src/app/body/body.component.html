@@ -1,0 +1,30 @@
+<div class="masterDiv">
+    <div class="mainDiv" *ngIf="nombre">
+        <div class="secondDiv"> 
+                    <h3 *ngIf="nombre">Empleado: {{nombre}} {{apellido}}</h3>
+            <p class="edad" *ngIf="edad">edad: {{edad}} </p>
+            <div class="container px-4 text-center">
+                <div class="row gx-5">
+                <div class="col">
+                <div class="p-3 bg-light"><button (click)="incrementarEdad()" class="btn btn-dark">Incrementar edad</button></div>
+                </div>
+                <div class="col">
+                    <div class="p-3 bg-light"><button (click)="disminuirEdad()" class="btn btn-dark">Disminuir edad</button></div>
+                </div>
+                </div>
+            </div>
+            <div class="pasatiempos">
+                <h3  >Pasatiempos</h3>
+                    <ul>
+                        <li *ngIf="pasatiempos">{{pasatiempos}}</li>
+                    </ul>
+                    <span *ngIf="edad >= 18">{{fiesta}}</span>
+                    <span *ngIf="edad < 18">{{noFiesta}}</span>
+            </div>
+        </div>
+        <div>
+            <img class="image" src="assets/1.jpeg" alt="img">
+        </div>
+    </div>
+
+</div>
